@@ -4,6 +4,8 @@ import { RouterProvider, createBrowserRouter } from 'react-router-dom';
 import Home from './pages/home';
 import { ThemeProvider, createTheme } from '@mui/material/styles';
 import CssBaseline from '@mui/material/CssBaseline';
+import Customizer from './pages/customizer';
+import './styles/index.css';
 
 const darkTheme = createTheme({
   palette: {
@@ -14,9 +16,11 @@ const darkTheme = createTheme({
 const router = createBrowserRouter([
   {
     path: "/",
-    element: (
-      <Home />
-    ),
+    element: <Home />
+  },
+  {
+    path: "/customize",
+    element: <Customizer />
   }
 ])
 
